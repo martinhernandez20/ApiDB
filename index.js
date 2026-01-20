@@ -5,6 +5,14 @@ const app = express();
 app.use(express.json());
 
 
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'API funcionando correctamente 🚀'
+  });
+});
+
+
 
 //TEST
 app.get('/test-db', async (req, res) => {
@@ -154,3 +162,4 @@ app.get('/debug-tablas', async (req, res) => {
 app.listen(3000, () => {
   console.log('Servidor listo');
 });
+
